@@ -146,6 +146,7 @@ jobs:
           azcliversion: 2.70.0
           inlineScript: |
             az webapp config set \
-              --resource-group YOUR_RESOURCE_GROUP \
+              --resource-group ClipAwayConsumer_group \
               --name ClipAwayConsumer \
               --startup-file "bash -c 'echo BOOTING && python manage.py consumer & python -m http.server 8000 --bind 0.0.0.0'"
+
