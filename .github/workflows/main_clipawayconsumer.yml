@@ -141,7 +141,7 @@ jobs:
           slot-name: 'Production'
 
       - name: Set Azure Web App Startup Command
-        uses: azure/CLI@v1
+        uses: azure/CLI@v2
         with:
           azcliversion: 2.70.0
           inlineScript: |
@@ -149,4 +149,5 @@ jobs:
               --resource-group ClipAwayConsumer_group \
               --name ClipAwayConsumer \
               --startup-file "bash -c 'echo BOOTING && python manage.py consumer & python -m http.server 8000 --bind 0.0.0.0'"
+
 
